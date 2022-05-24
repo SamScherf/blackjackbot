@@ -13,7 +13,7 @@ def generateOneHand():
     shouldHit = None
     playerVal = sum([VALS[card] for card in playerHand])
     originalPlayerVal = playerVal
-    print(playerHand, dealerHand)
+    print(dealerHand, playerHand)
     tryHitting = random.randint(0, 1)
 
     # Try hitting
@@ -45,7 +45,7 @@ def generateOneHand():
                 i += 1
         if shouldHit is None:
             shouldHit = playerVal >= dealerVal or (playerVal < dealerVal and playerVal >= originalPlayerVal)
-        print(playerHand, dealerHand)
+        print(dealerHand, playerHand)
         if shouldHit:
             print("Hitting was correct")
         else:
@@ -69,14 +69,20 @@ def generateOneHand():
             i += 1
         if shouldHit is None:
             shouldHit = playerVal < dealerVal
-        print(playerHand, dealerHand)
+        print(dealerHand, playerHand)
         if not shouldHit:
             print("Staying was correct")
         else:
             print("Staying was incorrect")
+    result = (VALS[deck[0]], VALS[deck[2]] + VALS[deck[3]], shouldHit)
+    print(str(result[0]) + ',' + str(result[1]) + ',' + str(int(result[2])))
+    return str(result[0]) + ',' + str(result[1]) + ',' + str(int(result[2])) + '\n'
 
 def main():
-    generateOneHand()
+    trainingData = open(r"training1.txt", "w")
+    for i in range(10000):
+        generateOneHand()
+        trainingData.write(generateOneHand())
 
 if __name__ == '__main__':
     main()
