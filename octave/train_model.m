@@ -8,7 +8,7 @@ _size = get_size();
 nn_params = init_params(_size);
 
 % Get training data
-% [X y] = get_XY("../data/training1.txt");
+% [X y] = get_XY("../data/trainingv1.txt");
 [X y] = get_XY("../data/trainingv2.txt");
 
 % Set options and map cost function
