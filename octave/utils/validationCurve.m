@@ -10,16 +10,16 @@ error_cv = zeros(length(lambda_vec), 1);
 % Get size of model
 _size = get_size();
 
+% Randomly initialize parameters
+init_nn_params = init_params(_size);
+
 % Loop through every lambda
 for i=1:length(lambda_vec)
-
-	% Randomly initialize parameters
-	nn_params = init_params(_size);
 
 	% Train model with given lambda
 	options = optimset('MaxIter', 400);
 	costFunction = @(p) nnCostFunction(p, _size, X, y, lambda_vec(i));
-	[nn_params, cost] = fmincg(costFunction, nn_params, options);
+	[nn_params, cost] = fmincg(costFunction, init_nn_params, options);
 
     	% Get predictions
 	J_train = nnCostFunction(nn_params, _size, X, y, 0);
