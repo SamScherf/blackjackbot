@@ -12,7 +12,7 @@ nn_params = init_params(_size);
 [X y] = get_XY("../data/trainingv2.txt");
 
 % Set options and map cost function
-lambda = 0;
+lambda = 0.01;
 options = optimset('MaxIter', 400);
 costFunction = @(p) nnCostFunction(p, _size, X, y, lambda);
 

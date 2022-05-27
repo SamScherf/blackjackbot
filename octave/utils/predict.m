@@ -1,6 +1,10 @@
-function p = predict(Theta1, Theta2, X)
+function p = predict(nn_params, X)
 % This function makes predictions based
 % on the given parameters and provided data
+
+% Unroll nn_params into theta 1 and theta 2
+_size = get_size();
+[Theta1 Theta2] = roll(nn_params, _size);
 
 % Get number of training features and add bias to X
 m = size(X, 1);
