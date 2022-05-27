@@ -21,4 +21,4 @@ xlabel("Lambda");
 ylabel("Error");
 title("Validation Curve");
 legend('Training Error', 'Cross Validation Error')
-print(hf, "plot.png");
+print(hf, "validation_curve.png");

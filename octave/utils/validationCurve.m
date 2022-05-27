@@ -3,7 +3,7 @@ function [lambda_vec, error_train, error_cv] = validationCurve(X, y, X_cv, y_cv)
 % Values of lambda to try
 lambda_vec = [0 0.001 0.003 0.001 0.003 0.01 0.03 0.1 0.3 1]';
 
-% Initialize accuracy vectors
+% Initialize error vectors
 error_train = zeros(length(lambda_vec), 1);
 error_cv = zeros(length(lambda_vec), 1);
 
