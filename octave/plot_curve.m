@@ -2,11 +2,12 @@
 addpath('utils/');
 
 % Get training and cross validation data
-[X y] = get_XY("../data/trainingv2.txt");
-[X_cv y_cv] = get_XY("../data/crossVal.txt");
+[X y] = get_XY("../data/training26Med.txt");
+[X_cv y_cv] = get_XY("../data/crossVal26Med.txt");
 
 % Get learning curve
-lambda = 0.0001;
+% lambda = 0.0001;
+lambda = 0;
 [steps, error_train, error_cv] = learningCurve(X, y, X_cv, y_cv, lambda);
 
 % Plot results
