@@ -1,4 +1,3 @@
-% GRADED FUNCTION: learningCurve
 function [steps, error_train, error_val] = learningCurve(X, y, X_cv, y_cv, lambda)
 
 % Set number of steps

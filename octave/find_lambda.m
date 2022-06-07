@@ -2,8 +2,8 @@
 addpath('utils/');
 
 % Get training and cross validation data
-[X y] = get_XY("../data/trainingv2.txt");
-[X_cv y_cv] = get_XY("../data/crossVal.txt");
+[X y] = get_XY("../data/training26Med.txt");
+[X_cv y_cv] = get_XY("../data/crossVal26Med.txt");
 
 % Try various lambdas error
 [lambda_vec, error_train, error_cv] = validationCurve(X, y, X_cv, y_cv);
