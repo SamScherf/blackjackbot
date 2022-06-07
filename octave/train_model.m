@@ -13,7 +13,7 @@ nn_params = init_params(_size);
 % Set options and map cost function
 % lambda = 0.0001;
 lambda = 0;
-options = optimset('MaxIter', 800);
+options = optimset('MaxIter', 1600);
 costFunction = @(p) nnCostFunction(p, _size, X, y, lambda);
 
 % Train and save model

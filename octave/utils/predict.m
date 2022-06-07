@@ -1,4 +1,4 @@
-function p = predict(nn_params, X)
+function p = predict(nn_params, X, epsilon)
 % This function makes predictions based
 % on the given parameters and provided data
 
@@ -23,6 +23,5 @@ z4 = a3*Theta3';
 a4 = sigmoid(z4);
 
 % Get prediction
-p = round(a4);
-
+p = a4 >= ones(m, 1).*epsilon;
 end
