@@ -1,7 +1,10 @@
 # Neural Network Based Blackjack Bot
-<img src='https://img.shields.io/github/issues/SamScherf/blackjackbot'> <img src='https://img.shields.io/github/forks/SamScherf/blackjackbot'> <img src='https://img.shields.io/github/stars/SamScherf/blackjackbot'> <img src='https://img.shields.io/github/license/SamScherf/blackjackbot'>
+![issues](https://img.shields.io/github/issues/SamScherf/blackjackbot)
+![forks](https://img.shields.io/github/forks/SamScherf/blackjackbot)
+![stars](https://img.shields.io/github/stars/SamScherf/blackjackbot)
+![license](https://img.shields.io/github/license/SamScherf/blackjackbot)
 
-![Poster](/graphics/poster.png?raw=true)
+![poster](/graphics/poster.png?raw=true)
 
 ## Introduction
 The problem we tackle is to use a neural network to learn how to play the card game blackjack. Blackjack is a mathematically-solved game in the sense that, for any given game state, it’s possible to compute the statistically best next move. As such, our goal is not to innovate novel blackjack strategy, but rather to use the game as a base to gain theoretical insights into the power of supervised learning, even on problems which are not traditionally suited to a supervised learning approach.  
